@@ -1,0 +1,8 @@
+#ifndef _ERROR_H
+#define _ERROR_H
+#define NOT_VALID_VARIABLE 49
+#define NOT_VALID_VARIABLE_TYPE 50
+#define NOT_VALID_INTEGER 51
+#define NOT_VALID_INTEGER_TYPE 52
+#define OVERFLOW 53
+#endif // _ERROR_H
