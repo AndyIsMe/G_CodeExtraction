@@ -2,21 +2,37 @@
 #define _CHECKREGISTER_H
 #include "Token.h"
 #include "Tokenizer.h"
-#include "error.h"
+#include "Error.h"
 #include "toupper.h"
 #include <malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct OperandInfo OperandInfo;
-struct OperandInfo {
-  int X_value;
-  int Y_value;
-  int Z_value;
-  int F_value;
+
+typedef struct Variable Variable;
+struct Variable {
+  char name;
+  int integer;
+  int fraction;
+  int isValid;
 };
 
-void xyzf(Tokenizer *tokenizer , OperandInfo *operandInfo);
+struct VariableMap {
+  char name;
+  Variable *var;
+};
 
+// Variable *XVar = {0,0,0,0};
+// Variable *YVar = {0,0,0,0};
+// Variable *ZVar = {0,0,0,0};
+
+#define isCharacter(x)      (((x) >= 'a' && (x) <= 'z') || ((x) >= 'A' && (x) <= 'z'))
+#define isDigit(x)          ((x) >= '0' && (x) <= '9')
+#define isSpace(x)          ((x) == ' ')
+
+// void xyzf(Tokenizer *tokenizer , OperandInfo *operandInfo);
+void fillInVariableTable(char **line);
+// void getNextVariable(char **line,Variable v);
+void getNextVariable(char *line,Variable v);
 #endif // _CHECKREGISTER_H
