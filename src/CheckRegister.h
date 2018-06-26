@@ -27,12 +27,13 @@ struct VariableMap {
 // Variable *YVar = {0,0,0,0};
 // Variable *ZVar = {0,0,0,0};
 
-#define isCharacter(x)      (((x) >= 'a' && (x) <= 'z') || ((x) >= 'A' && (x) <= 'z'))
+// #define isCharacter(x)      (((x) >= 'a' && (x) <= 'z') || ((x) >= 'A' && (x) <= 'z'))
 #define isDigit(x)          ((x) >= '0' && (x) <= '9')
-#define isSpace(x)          ((x) == ' ')
+// #define isSpace(x)          ((x) == ' ')
 
 // void xyzf(Tokenizer *tokenizer , OperandInfo *operandInfo);
-void fillInVariableTable(char **line);
-// void getNextVariable(char **line,Variable v);
+void fillInVariableTable(char **var);
 void getNextVariable(char *line,Variable v);
+// void getNextVariable(char **line,Variable v);
+// void getNextVariable(char *line,Variable v);
 #endif // _CHECKREGISTER_H

@@ -11,6 +11,7 @@ void tearDown(void){}
 
 void test_string(void)
 {
-  char *str = "X10-Y10";
-  fillInVariableTable(&str);
+
+  char *str = "X10 Y10";
+  fillInVariableTable(str);
 }
