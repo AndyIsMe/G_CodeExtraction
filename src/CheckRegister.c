@@ -11,17 +11,6 @@
 void fillInVariableTable(char **var)
 {
   Variable v;
-  // fgets(text,100,stdin);
-  // printf("%s\n",text[1] );
-  // printf("Enter from index:\n");
-  // scanf("%d",&from);
-  //
-  // printf("Enter from index:\n");
-  // scanf("%d",&to);
-  // Variable v;
-  // printf("string %s\n",*line);
-  // getNextVariable(*(&line),v);
-  // getNextVariable(*line,v);
 
   getNextVariable(var,v);
 }
@@ -46,6 +35,7 @@ void getNextVariable(char *line,Variable v)
     {
       // Variable.name = substr[ctr][0];
       substr[ctr][j] = line[i];
+      line[i] = 0;
       j++;
 
     }
